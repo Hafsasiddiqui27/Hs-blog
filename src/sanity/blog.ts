@@ -1,6 +1,5 @@
 
 import { defineType, defineField, defineArrayMember,} from "sanity";
-import { author } from "./schemaTypes/author";
 
 export const blog = defineType( {
     name: 'blog',
@@ -45,15 +44,7 @@ export const blog = defineType( {
         of: [defineArrayMember(
           { type: 'block' })],
       }),
-      defineField(
-        {
-          name: 'author',
-          title: 'Author',
-          type: 'reference',
-          to:
-           [{ type: 'author' }],
-        }),
-      
+     
     ]
    
   }
